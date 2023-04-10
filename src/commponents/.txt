@@ -1,0 +1,33 @@
+import React, { useState } from 'react';
+
+function Portfolio() {
+  const [newSkill, setNewSkill] = useState('');
+  const [skills, setSkills] = useState(['HTML', 'CSS', 'JavaScript']);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSkills([...skills, newSkill]);
+    setNewSkill('');
+  };
+
+  return (
+    <div>
+      <h2>Skills</h2>
+      <ul>
+        {skills.map((skill) => (
+          <li key={skill}>{skill}</li>
+        ))}
+      </ul>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={newSkill}
+          onChange={(e) => setNewSkill(e.target.value)}
+        />
+        <button type="submit">Add Skill</button>
+      </form>
+    </div>
+  );
+}
+
+export default Portfolio;

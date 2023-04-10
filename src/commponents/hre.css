@@ -1,0 +1,47 @@
+.tj{
+  
+width: 355px;
+border-radius: 50%;
+position: absolute;
+top: 87px;
+left: 800px;
+/* overflow: hidden; */
+display: flex;
+transition: 1s;
+box-shadow: 10px 10px 10px rgb(165, 172, 236);
+}
+
+
+
+.tj:hover{
+  transform: scale(1.2);
+  
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  background-color: white;
+  color: black;
+  
+}
+
+
+
+@media  (max-width: 768px) {
+ .tj{
+  width: 158px;
+  border-radius: 50%;
+  position: absolute;
+  top: 136px;
+  left: 63%;
+  /* overflow: hidden; */
+  display: flex;
+  transition: 1s;
+  box-shadow: 10px 10px 10px rgb(165, 172, 236);
+
+}
+
+}
